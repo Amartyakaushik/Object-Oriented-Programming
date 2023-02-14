@@ -76,14 +76,77 @@
 #     print("yes it")
 
 
-b=int(input("num: "))
-for i in range(b):
-        y = True
-        if(str(i) == str(i)[::-1]):
-            if(i>2):
-                for a in range(2,i):
-                    if(i%a==0):
-                        y = False
-                        break
-                    if y:
-                        print(i)
+# b=int(input("num: "))
+# for i in range(b):
+#         y = True
+#         if(str(i) == str(i)[::-1]):
+#             if(i>2):
+#                 for a in range(2,i):
+#                     if(i%a==0):
+#                         y = False
+#                         break
+#                     if y:
+#                         print(i)
+
+
+##SS234
+# import math
+# a=float(input("opposite: "))
+# b=float(input("hypotemous: "))
+# c=a/b
+# x=math.asin(c)  # To find in inverse of sin
+# deg=math.degrees(x)
+# print("{0:.2f}".format(deg))
+
+##SS235
+# import math
+# n=float(input("angle: "))
+# print("{0:.2f}".format(math.tan(math.radians(n))))
+
+#SS236
+# import math
+# side1=float(input("side1: "))
+# side2=float(input("side2: "))
+# hyp=math.sqrt((side1**2+(side2)**2))
+# print(hyp**3)
+
+##SS237
+# import math
+# n=int(input("n: "))
+# print("{0:.3f}".format(math.pi**n))
+
+##SS238
+# import math
+# w=10
+# a=int(input("Amplitude: "))
+# t=int(input("time: "))
+# xt=a*(math.sin(w*t))
+# print("electromagnetic wave (xt) : {:.4f}".format(xt))
+
+# ##239
+# import math
+# f=float(input("f: "))
+# print("{:.4f}".format(math.acos(f)))
+
+##240
+# import math
+# y=int(input("y: "))
+# x=math.radians(y)
+# cosec_x=1/math.sin(x)
+# sec_x=1/math.cos(x)
+# cot_x=1/math.tan(x)
+# print("{0:.2f}".format(cosec_x))
+# print("{0:.2f}".format(sec_x))
+# print("{0:.2f}".format(cot_x))
+
+## DEF QUESTIONS
+##265
+# def minimum(x,y,z):
+#     a=max(x,y,z)
+#     b=min(x,y,z)
+#     q=x+y+z-(a+b)
+#     return q
+# x=int(input("X: "))
+# y=int(input("Y: "))
+# z=int(input("Z: "))
+# print(minimum(x,y,z))
