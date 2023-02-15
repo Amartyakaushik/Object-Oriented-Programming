@@ -150,3 +150,54 @@
 # y=int(input("Y: "))
 # z=int(input("Z: "))
 # print(minimum(x,y,z))
+
+##266
+# def is_prime(year):
+#     if year%100==0:
+#         if year%400==0:
+#             print(366*24*60*60)
+#     elif year%4==0:
+#         print(366*24*60*60)
+#     else:
+#         print(-1)
+# year=int(input("year: "))
+# is_prime(year)
+
+#269                                 doubt
+# x=int(input("x: "))
+# y=int(input("y: "))
+# def perfect_cube(x,y):
+#     for i in range (x,y):
+#         j=i**1/3
+#         if round(j**3)==i:
+#             print(i)
+#         # else:
+#         #     print("empty")
+# perfect_cube(x,y)
+            
+##270
+# string=str(input("str: "))
+# def constants(string):
+#     b=''
+#     a=0
+#     for i in string:
+#         if i in ["a","e",'i','o','u','A','E','I','O','U']:
+#             continue
+#         else:
+#             b+=i
+#             a+=1
+#     if a==0:
+#         print("Empty")
+#     else:
+#         print(b)
+# constants(string)
+
+##271
+n=int(input("n: "))
+def num_base_five(n):
+    j=str(n)
+    for i in len(j)+1:
+        j[-i]=(5**(i-1))*i
+        print(j)
+num_base_five(n)
+        
