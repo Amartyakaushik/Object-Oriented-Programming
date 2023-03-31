@@ -103,20 +103,66 @@
 # Shupnekha=employee.from_str("Shupnekha-Rawat-99880")
 # print(Shupnekha.__dict__)
 
-#STATIC METHOD (WHEN NEITHER CLASS VARIABLE NOR INSTANCE VARIABLE IS NEEDED)
+# #STATIC METHOD (WHEN NEITHER CLASS VARIABLE NOR INSTANCE VARIABLE IS NEEDED)
+# class employee:
+#     def __init__(self,fname,lname,salary):
+#         self.fname=fname
+#         self.lname=lname
+#         self.salary=salary
+    
+#     @staticmethod
+#     def is_open(day):
+#         if(day=="sunday"):
+#             print(False)
+#         else:
+#             print(True)
+
+# Shubham=employee("Shubham","Gill",88990)
+# Shubham.is_open("monday")
+# employee.is_open("sunday")
+
+# #INHERITENCE
+# class employee:
+#     increment=1.7
+#     def __init__(self,fname,lname,salary):
+#         self.fname=fname
+#         self.lname=lname
+#         self.salary=salary
+    
+# class programmar(employee):
+#     def __init__(self,fname,lname,salary,prog_lang,exp):
+#         super().__init__(fname,lname,salary)  # SUPER() FUNCITON IS USED TO INHERITENCE PROPERTIES FROM THE PARENT CLASS
+#         self.prog_lang=prog_lang
+#         self.exp=exp
+    
+#     def increased(self):
+#         self.salary=int(self.salary*(self.increment+0.3))
+#         return self.salary
+# Amartya=programmar("Amartya","Kaushik",88990,"Python","6 yrs")
+# print(Amartya.__dict__)
+# print(Amartya.salary)
+# Amartya.increased()
+# print(Amartya.salary)
+
+#DUNDER METHOD
 class employee:
     def __init__(self,fname,lname,salary):
         self.fname=fname
         self.lname=lname
         self.salary=salary
-    
-    @staticmethod
-    def is_open(day):
-        if(day=="sunday"):
-            print(False)
-        else:
-            print(True)
 
-Shubham=employee("Shubham","Gill",88990)
-Shubham.is_open("monday")
-employee.is_open("sunday")
+    #1st 
+    def __add__(self,other):
+        return self.salary+other.salary
+    
+    def __repr__(self):
+        return "Employee({},{},{})".format(self.fname,self.lname,self.salary)
+    
+    def __str__(self):
+        return "The name of employee is {} {} and his salary is {}".format(self.fname,self.lname,self.salary)
+    
+Amartya=employee("Amartya","Kaushik",88000)
+Charchil=employee("Charchil","Raj",88000)
+# print(Amartya+Charchil)
+# print(Amartya.__repr__())
+print(Amartya.__str__())
