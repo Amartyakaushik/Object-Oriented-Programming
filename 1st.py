@@ -144,25 +144,59 @@
 # Amartya.increased()
 # print(Amartya.salary)
 
-#DUNDER METHOD
+# #DUNDER METHOD
+# class employee:
+#     def __init__(self,fname,lname,salary):
+#         self.fname=fname
+#         self.lname=lname
+#         self.salary=salary
+
+#     #1st 
+#     def __add__(self,other):
+#         return self.salary+other.salary
+    
+#     def __repr__(self):
+#         return "Employee({},{},{})".format(self.fname,self.lname,self.salary)
+    
+#     def __str__(self):
+#         return "The name of employee is {} {} and his salary is {}".format(self.fname,self.lname,self.salary)
+    
+# Amartya=employee("Amartya","Kaushik",88000)
+# Charchil=employee("Charchil","Raj",88000)
+# # print(Amartya+Charchil)
+# # print(Amartya.__repr__())
+# print(Amartya.__str__())
+
+
+#PROPERTY DECORATOR , SETTER , DELETER...
 class employee:
     def __init__(self,fname,lname,salary):
         self.fname=fname
         self.lname=lname
         self.salary=salary
 
-    #1st 
-    def __add__(self,other):
-        return self.salary+other.salary
-    
-    def __repr__(self):
-        return "Employee({},{},{})".format(self.fname,self.lname,self.salary)
-    
-    def __str__(self):
-        return "The name of employee is {} {} and his salary is {}".format(self.fname,self.lname,self.salary)
-    
-Amartya=employee("Amartya","Kaushik",88000)
-Charchil=employee("Charchil","Raj",88000)
-# print(Amartya+Charchil)
-# print(Amartya.__repr__())
-print(Amartya.__str__())
+    @property
+    def email(self):
+        return self.fname+self.lname+"email.com"
+
+    @email.setter
+    def email(self,given_email):
+        name_list=given_email.split('@')[0].split('.')
+        self.fname=name_list[0]
+        self.lname=name_list[1]
+
+class programmar(employee):
+    def __init__(self,fname,lname,salary,prog_lang,exp):
+        super().__init__(fname,lname,salary)
+        self.prog_lang=prog_lang
+        self.exp=exp
+
+# Amartya=employee("Amartya","kaushik",95000)
+Amartya=programmar("Amartya","Kaushik",95000,"Python","1.5 yrs")
+
+print(Amartya.email)
+Amartya.lname="Thakur"
+print(Amartya.email)
+Amartya.email="Thakur.Amartya@email.com"
+print(Amartya.email)
+print(Amartya.__dict__)
