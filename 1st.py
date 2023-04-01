@@ -332,24 +332,39 @@
 #     return (sum==num)
 # print(is_armstrong(num))
 #                         #OR
-num=input("enter a number: ")
-def is_armstrong(num):
-    temp=num
-    str_num=str(num)
-    n_digit=len(str_num)
-    sum=0
-    for i in str_num:
-        sum+=int(i)**n_digit
-    return sum==num
-if (is_armstrong(num)):
-    print(num,"is a armstrong number.")
-else:
-    print(num,"is not an armstrong.")
+# num=input("enter a number: ")
+# def is_armstrong(num):
+#     temp=num
+#     str_num=str(num)
+#     n_digit=len(str_num)
+#     sum=0
+#     for i in str_num:
+#         sum+=int(i)**n_digit
+#     return sum==num
+# if (is_armstrong(num)):
+#     print(num,"is a armstrong number.")
+# else:
+#     print(num,"is not an armstrong.")
 
 
 # #6)Write a python program to enter 3*3 matrix from the console and also print transpose of it ...
-# matrix=[]
+matrix=[]
+for i in range(3):
+    a=[]
+    for j in range(3):
+        a.append(int(input("enter matrix[{}][{}]".format(i,j))))
+    matrix.append(a)
+transpose=[]
+for i in range(3):
+    tran_row=[]
+    for j in range(3):
+        tran_row.append(matrix[j][i])
+    transpose.append(tran_row)
+for i in transpose:
+    print(i)
+
   
+
 # #7)Let's write a simple python code for function.
 # #The program has a function sayhello() it takes a single argument which is a string.
 # #The argument inside the paranthesis of the function is username we end the header with a colon:
@@ -419,3 +434,16 @@ else:
 # p2.setName(name2)
 # print("Name of p1:",p1.getName())
 # print("Name of p2: ",p2.getName())
+
+# matrix=[]
+# rows=int(input("enter the no. of rows: "))
+# columns=int(input("enter the no. of columns: "))
+# for i in range(rows):
+#     a=[]
+#     for j in range (columns):
+#         a.append(int(input("enter the matrix[{}][{}]".format(i,j))))
+#     matrix.append(a)
+# for i in range(rows):
+#     for j in range(columns):
+#         print(matrix[i][j],end='')
+#     print()
