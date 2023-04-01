@@ -1,15 +1,15 @@
 # list=[23,"amartya",34,"charchil","shupnekha","lavanya","ghanshyam"]
 # list.insert(3,"shailav")
 # list.append(56)
-# print(list)
-# print(list[3])
-# print(list[0:4])
-# print(23 in list)
+# # print(list)
+# # print(list[3])
+# # print(list[0:4])
+# # print(23 in list)
 # for i in list:
-#     # if (i=="lavanya"):
-#     #     break;
 #     if (i=="charchil"):
-#         continue;
+#         break;
+#     # if (i=="charchil"):
+#     #     continue;
 #     print(i)
 
 
@@ -206,3 +206,116 @@
 # Amartya.email="Thakur.Amartya@email.com"
 # print(Amartya.email)
 # print(Amartya.__dict__)
+
+# #                                                            ENCAPSULATION
+# class rectangle:
+#     def __init__(self,length,breadth):
+#         self.__length=length
+#         self.__breadth=breadth
+
+#     def set_length(self,length):
+#         self.__length=length
+
+#     def set_heigth(self,breadth):
+#         self.breadth=breadth
+
+#     def get_length(self):
+#         return self.__length
+    
+#     def get_breadth(self):
+#         return self.__breadth
+    
+#     def area(self):
+#         return self.__length * self.__breadth
+    
+# rect1=rectangle(300,400)
+# rect3=rectangle(322,543)
+
+# # print(rect1.__length)
+# # print(rect1.__breadth)
+# # rect1.set_length(234)
+# # rect1.get_length()
+# print(rect1.area())
+# rect1.set_length(123)
+# print(rect1.get_length())
+
+#                                                           #QUESTIONS
+##1) Take character as input from the console using input() function.Write a programm to check whether the given input is a character or a digit,if the input is 0 then exit the program, otherwise print the result.
+
+# user_input=input("enter the character or a digit: ")
+# if user_input=='0':
+#     print("exit the program...")
+#     break;
+# elif ('a'<=user_input and user_input<='z' or 'A'<= user_input and user_input<='Z'):
+#     print("It is a character...")
+# elif user_input.isdigit:
+#     print("It is a digit")
+# else:
+#     print("wrong input :)")
+# elif user_input.ischa
+
+
+# list=["alsd",345,"hdfosdhf0","rahul",34,"amartya","kaushik","charchil","raj"]
+# for i in list:
+#     if i=="kaushik":
+#         break;
+#     else: 
+#         print(i)
+
+##2)Write a python program to count the vowels and consonants in the string,which is inputted from the user.
+
+# string=input("enter any string: ")
+# vowel_count=0
+# cons_count=0
+# if string in ['a','e','i','o','u','A','E','I','O','U']:
+#     vowel_count+=1
+# elif string.isalpha():
+#     cons_count+=1
+# print(vowel_count,cons_count)
+
+##3)Write a python program to convert farenthesis into celsius.The formula of farenheit conversion into celsius is: C=((farenheit-32)*5)/9.print the result.
+# temp=int(input("enter the temperature in farenheit: "))
+# c=((temp-32)*5)/9
+# print("the temp is {0:.2f} degree celsius".format(c))
+
+##4)Write a python program to calculate factorial of user input data by using the recursion concept.print the result.
+# def fact(n):
+#     if n==0:
+#         return 1
+#     else:
+#         return n*fact(n-1)
+# num=int(input("enter the value of num: "))
+# if num<0:
+#     print("oops! wrong input")
+# elif num==0:
+#     print("the factorial of 0 is 1")
+# else: 
+#     print("factorial of {} is {}".format(num,fact(num)))
+
+##5)Write a python program to check whether an integer is Armstron or not...
+num=int(input("enter the required input "))
+def armstrong(num):
+    sum=0
+    num_digit=len(str(num))
+    temp=num
+    while (temp!=0):
+        i=temp%10
+        sum+=i**num_digit
+        temp=temp//10
+    # return sum==num
+    if sum==num:
+        print("amrstrong")
+    else:
+        print("not a armstrong")
+print(armstrong(num))
+
+# def is_armstrong(num):
+#     n_digit=len(str(num))
+#     temp=num
+#     sum=0
+#     while(temp!=0):
+#         i=temp%10
+#         sum+=pow(i,n_digit)
+#         temp=temp//10
+#     return (sum==num)
+# print(is_armstrong(num))
