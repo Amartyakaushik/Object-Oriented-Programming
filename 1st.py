@@ -21,7 +21,7 @@ print(tuple[1:4])
 print(tuple.count(23))
 print(tuple.index("charchil"))
 
-ONLY UNIQUE VALUE IS STORED IN SET 
+#ONLY UNIQUE VALUE IS STORED IN SET 
 set={23,"amartya",43,"charchil",56,"shubhanya"}
 for i in set:
     print(i)
@@ -33,11 +33,12 @@ print(marks_dict["Amartya"])
 marks_dict["shupnekha"]=99
 print(marks_dict)
 
+                                                              #FUNCTIONS 
 def sum(first,second=3):
     print(first+second)
 sum(234,2765)
 
-
+                                                               ##OOPS
 # CLASS VARIABLE AND INSTANCE VARIABLE
 class employee:
     increment=1.9
@@ -61,7 +62,8 @@ print(Charchil.salary)
 Charchil.increased() # HERE THE CHANGE IS APPLIED TO THE INSTACE VARIABLE ONLY NOT TO THE WHOLE CLASS VARIABLE
 print(Charchil.salary)
 
-# CLASS MEHTOD
+
+                                                                # CLASS MEHTOD
 class employee:
     increment=1.9
     no_of_employee=0
@@ -87,7 +89,8 @@ employee.change_increment(3)# HERE THE CHANGE IS APPLIED TO THE WHOLE CLASS VARI
 Amartya.increased()
 print(Amartya.salary)
 
-#CLASS AS ALTERNATIVE CONSTRUCTURE...
+
+                                                        #CLASS AS ALTERNATIVE CONSTRUCTURE...
 class employee:
     def __init__(self,fname,lname,salary):
         self.fname=fname
@@ -103,7 +106,8 @@ class employee:
 Shupnekha=employee.from_str("Shupnekha-Rawat-99880")
 print(Shupnekha.__dict__)
 
-#STATIC METHOD (WHEN NEITHER CLASS VARIABLE NOR INSTANCE VARIABLE IS NEEDED)
+
+                                 #STATIC METHOD (WHEN NEITHER CLASS VARIABLE NOR INSTANCE VARIABLE IS NEEDED)
 class employee:
     def __init__(self,fname,lname,salary):
         self.fname=fname
@@ -121,7 +125,8 @@ Shubham=employee("Shubham","Gill",88990)
 Shubham.is_open("monday")
 employee.is_open("sunday")
 
-#INHERITENCE
+
+                                                                    #INHERITENCE
 class employee:
     increment=1.7
     def __init__(self,fname,lname,salary):
@@ -144,7 +149,8 @@ print(Amartya.salary)
 Amartya.increased()
 print(Amartya.salary)
 
-#DUNDER METHOD
+
+                                                              #DUNDER METHOD
 class employee:
     def __init__(self,fname,lname,salary):
         self.fname=fname
@@ -168,7 +174,7 @@ Charchil=employee("Charchil","Raj",88000)
 print(Amartya.__str__())
 
 
-#PROPERTY DECORATOR , SETTER , DELETER...
+                                                        #PROPERTY DECORATOR , SETTER , DELETER...
 class employee:
     def __init__(self,fname,lname,salary):
         self.fname=fname
