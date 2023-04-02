@@ -348,20 +348,20 @@
 
 
 # #6)Write a python program to enter 3*3 matrix from the console and also print transpose of it ...
-matrix=[]
-for i in range(3):
-    a=[]
-    for j in range(3):
-        a.append(int(input("enter matrix[{}][{}]".format(i,j))))
-    matrix.append(a)
-transpose=[]
-for i in range(3):
-    tran_row=[]
-    for j in range(3):
-        tran_row.append(matrix[j][i])
-    transpose.append(tran_row)
-for i in transpose:
-    print(i)
+# matrix=[]
+# for i in range(3):
+#     a=[]
+#     for j in range(3):
+#         a.append(int(input("enter matrix[{}][{}]".format(i,j))))
+#     matrix.append(a)
+# transpose=[]
+# for i in range(3):
+#     tran_row=[]
+#     for j in range(3):
+#         tran_row.append(matrix[j][i])
+#     transpose.append(tran_row)
+# for i in transpose:
+#     print(i)
 
   
 
@@ -447,3 +447,111 @@ for i in transpose:
 #     for j in range(columns):
 #         print(matrix[i][j],end='')
 #     print()
+
+#                                                            #FABONACCI SERIES
+# def fabonacci(num):
+#     if num<0:
+#         print("Wrong input")
+#     elif num==0:
+#         return 0
+#     elif num==1 or num==2:
+#         return 1
+#     else:
+#         return fabonacci(num-1)+fabonacci(num-2)
+# print(fabonacci(4))
+
+                                                             ##FABONACCI ARRAY
+# fibarray=[0,1]
+# def fibonacci(n):
+#     if n<0:
+#         print("Wrong input...")
+#     elif n<len(fibarray):
+#         return fibarray[n]
+#     else:
+#         fibarray.append(fibonacci(n-1)+fibonacci(n-2))
+#         return fibarray[n]
+# print(fibonacci(9))
+
+##Write a program to find whether an inputted number is perfect number  or not...
+# num=int(input("enter a num: "))
+# def isperfect(n):
+#     sum=1
+#     i=2
+#     while i*i<n:
+#         if n%i==0:
+#             sum=sum+i+n/i
+#         i+=1
+#     return (True if sum==n and n!=1 else False)
+# print(isperfect(num))
+
+##write a program to find if the input is a perfect square or not...
+# num=int(input("enter num: "))
+# def isper_sqr(num):
+#     i=1
+#     while(i**2<=num):
+#         if ((num%i==0 and num/i==i)):
+#             return (True)
+#         i+=1
+# print(isper_sqr(num))
+
+##ARMSTRONG
+# def armstrong(num):
+#     sum=0
+#     len_num=len(str(num))
+#     temp=num
+#     while(temp!=0):
+#         i=temp%10
+#         sum+=i**len_num
+#         temp=temp//10
+#     return sum==num
+# num=int(input("enter a number: "))
+# print(armstrong(num))
+
+# #factorial
+# def fact(n):
+#     if n<0:
+#         print("wrong input")
+#     elif n==0 or n==1:
+#         return 1
+#     else:
+#         return n*fact(n-1)
+# num=int(input("enter a num: "))
+# print(fact(num))
+
+# ##fabonacci series
+# def fabonacci(num):
+#     if num==0:
+#         return 0
+#     elif num==1 or num==2:
+#         return 1
+#     else:
+#         return fabonacci(num-1)+fabonacci(num-2)
+# num=int(input("enter a num: "))
+# print(fabonacci(num))
+
+# # pallindrome of string
+# def is_pallindrome(s):
+#     return s==s[::-1]
+# string=str(input("enter any string: "))
+# print(is_pallindrome(string))
+
+# ## PALLINDROME OF INTEGER
+# def is_pallindrome(num):
+#     str_num=str(num)
+#     return str_num==str_num[::-1]
+# num=int(input("enter an integer value: "))
+# print(is_pallindrome(num))
+
+##read and write a file
+l=["Amartya\n","Charchil\n","Shupnekha\n","luccy\n"]
+file1=open('myfile.txt','w')
+file1.writelines(l)
+file1.close()
+
+file=open('myfile.txt','r')
+lines=file.readlines()
+
+count=0
+for line in lines:
+    count+=1
+    print("line{}:{}".format(count,line.strip()))
